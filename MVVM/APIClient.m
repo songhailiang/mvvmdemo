@@ -16,7 +16,7 @@
     static APIClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedClient = [[APIClient alloc] initWithBaseURL:[NSURL URLWithString:@"https://cftest.50sh.com/"]];
+        _sharedClient = [[APIClient alloc] initWithBaseURL:[NSURL URLWithString:@"https://xxxxx/"]];
         AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
         securityPolicy.allowInvalidCertificates = YES;
         _sharedClient.securityPolicy = securityPolicy;
@@ -49,7 +49,7 @@
 -(RACSignal *)fetchProductWithPageIndex:(NSNumber *)page {
     
     NSDictionary *params = @{
-                             @"AppId":@"0010074e0726bc25d418ea2a52a433f77f0011437548967",
+                             @"AppId":@"123456",
                              @"Page":page
                              };
     
